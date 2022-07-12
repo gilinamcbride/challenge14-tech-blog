@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --background-color: #f6e9eb;
+  --dark-green: #2b4743;
+  --light-pink: #ffd3db;
+  --light-blue: #cedeeb;
+  --coral: #da7073;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+  margin: 20px;
+  height: 100px;
+  background-color: var(--dark-green);
+  color: #f6e9eb;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 75px;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--background-color);
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+main {
+  margin: 20px;
+}
+
+footer {
+  background-color: var(--light-blue);
+  height: 100px;
+  margin: 20px;
+  padding: 20px;
+  color: var(--dark-green);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: end;
+}
+
+footer p {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/* HOMEPAGE BLOG POST STYLING */
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: var(--light-pink);
+  flex: 0 0 60%;
+}
+
+.blog:nth-child(odd) {
+  background-color: var(--coral);
+}
+
+.title {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.info {
+  font-size: 18px;
+}
+
+/* LOGIN PAGE STYLING */
+
+.sign-up,
+.login {
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.second-div {
+  border: #2b4743 solid 3px;
+  height: 300px;
+  text-align: center;
+}
+
+.second-div a {
+  text-decoration: none;
+  color: var(--dark-green);
+  font-size: 18px;
+}
+
+.sign-up p {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 15px;
+  background-color: var(--light-pink);
+  color: var(--dark-green);
+  border-bottom: var(--dark-green) solid 3px;
+}
+
+.login p {
+  font-weight: bold;
+  font-size: 25px;
+  padding: 15px;
+  background-color: var(--light-blue);
+  color: var(--dark-green);
+  border-bottom: var(--dark-green) solid 3px;
+}
+
+.login-form div,
+.signup-form div {
+  margin: 20px 20px;
+}
+
+.login-form label,
+.signup-form label {
+  font-size: 20px;
+}
+
+.login-form button,
+.signup-form button {
+  background-color: var(--dark-green);
+  color: var(--background-color);
+  font-size: 20px;
+  border: none;
+  padding: 10px;
+  width: 250px;
+}

@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
       },
     ],
   })
-    .then((dbUserData) => res.json(dbUserData))
+    .then((dbBlogData) => res.json(dbBlogData))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -45,12 +45,12 @@ router.get("/:id", (req, res) => {
       },
     ],
   })
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+    .then((dbBlogData) => {
+      if (!dbBlogData) {
+        res.status(404).json({ message: "No Blog found with this id" });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbBlogData);
     })
     .catch((err) => {
       console.log(err);
@@ -64,7 +64,7 @@ router.post("/", (req, res) => {
     content: req.body.content,
     user_id: req.body.user_id,
   })
-    .then((dbPostData) => res.json(dbPostData))
+    .then((dbBlogData) => res.json(dbBlogData))
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);
@@ -83,12 +83,12 @@ router.put("/:id", (req, res) => {
       },
     }
   )
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+    .then((dbBlogData) => {
+      if (!dbBlogData) {
+        res.status(404).json({ message: "No Blog found with this id" });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbBlogData);
     })
     .catch((err) => {
       console.log(err);
@@ -102,12 +102,12 @@ router.delete("/:id", (req, res) => {
       id: req.params.id,
     },
   })
-    .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
+    .then((dbBlogData) => {
+      if (!dbBlogData) {
+        res.status(404).json({ message: "No Blog found with this id" });
         return;
       }
-      res.json(dbPostData);
+      res.json(dbBlogData);
     })
     .catch((err) => {
       console.log(err);
