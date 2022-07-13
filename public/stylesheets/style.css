@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+/* MAIN CONTENT STYLING */
 
 :root {
   --background-color: #f6e9eb;
@@ -184,7 +185,6 @@ footer p {
 
 .single-blog-post {
   margin: 0 30px;
-  /* background-color: var(--light-pink); */
 }
 
 .post-title {

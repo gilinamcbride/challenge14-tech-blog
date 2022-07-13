@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
     .then((dbBlogData) => {
       //   res.render("homepage", dbBlogData[0].get({ plain: true }));
       const blogs = dbBlogData.map((blog) => blog.get({ plain: true }));
-      res.render("homepage", { blogs });
+      res.render("homepage", { blogs, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
@@ -31,6 +31,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("/blog/:id", (req, res) => {
+  if (!req.session.loggedIn) {
+    res.redirect("/login");
+    return;
+  }
   Blog.findOne({
     where: {
       id: req.params.id,
@@ -52,11 +56,11 @@ router.get("/blog/:id", (req, res) => {
   })
     .then((dbBlogData) => {
       if (!dbBlogData) {
-        res.status(404).json({ message: "No post found with this id" });
+        res.status(404).json({ message: "No blog found with this id" });
         return;
       }
       const blog = dbBlogData.get({ plain: true });
-      res.render("single-blog", { blog });
+      res.render("single-blog", { blog, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);

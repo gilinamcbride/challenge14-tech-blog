@@ -15,15 +15,17 @@
   </div>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
+{{#if loggedIn}}
+  <form class="comment-form">
+    <div>
+      <textarea name="comment-body"></textarea>
+    </div>
 
-  <div>
-    <button type="submit">Comment</button>
-  </div>
-</form>
+    <div>
+      <button type="submit">Comment</button>
+    </div>
+  </form>
+{{/if}}
 
 <div class="comments">
   {{#each blog.comments}}
@@ -39,3 +41,5 @@
     </section>
   {{/each}}
 </div>
+
+<script src="/javascript/comments.js"></script>
