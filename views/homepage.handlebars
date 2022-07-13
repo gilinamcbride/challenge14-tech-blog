@@ -1,17 +1,18 @@
 <div class="blog-list">
   {{#each blogs as |blog|}}
     <article class="blog">
-      <div class="title">
-        <h2>{{title}}</h2>
-      </div>
-      <div class="info">
-        By
-        {{user.username}}
-        on
-        {{createdAt}}
-        |
-        <a href="/blog/{{id}}">{{comments.length}} comment(s)</a>
-      </div>
+      <a href="/blog/{{id}}">
+        <div class="title">
+          {{title}}
+        </div>
+        <div class="info">
+          By
+          {{user.username}}
+          on
+          {{createdAt}}
+          |
+          <span>{{comments.length}} comment(s)</span>
+        </div></a>
     </article>
   {{/each}}
 </div>

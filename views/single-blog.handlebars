@@ -1,0 +1,41 @@
+<article class="single-blog-post">
+  <div class="post-title">
+    <a href="/blog/{{blog.id}}">{{blog.title}}</a>
+  </div>
+  <div class="content">
+    {{blog.content}}
+  </div>
+  <div class="user-info">
+    By
+    {{blog.user.username}}
+    on
+    {{blog.createdAt}}
+    |
+    <span>{{blog.comments.length}} comment(s)</span>
+  </div>
+</article>
+
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Comment</button>
+  </div>
+</form>
+
+<div class="comments">
+  {{#each blog.comments}}
+    <section class="comment">
+      <div class="comment-text">
+        {{comment_text}}
+      </div>
+      <div class="comment-info">
+        {{user.username}}
+        on
+        {{created_at}}
+      </div>
+    </section>
+  {{/each}}
+</div>
