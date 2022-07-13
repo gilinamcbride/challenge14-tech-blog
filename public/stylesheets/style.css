@@ -14,6 +14,8 @@
 body {
   background-color: var(--background-color);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -60,6 +62,7 @@ header nav a {
 
 main {
   margin: 20px;
+  flex: 100%;
 }
 
 footer {
@@ -72,6 +75,7 @@ footer {
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: end;
+  flex-shrink: 0;
 }
 
 footer p {
@@ -114,6 +118,7 @@ footer p {
   color: black;
   font-weight: bold;
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 .info {
@@ -197,6 +202,7 @@ footer p {
   color: black;
   font-weight: bold;
   font-size: 45px;
+  text-transform: capitalize;
 }
 
 .content {
@@ -262,6 +268,13 @@ footer p {
 
 /* DASHBOARD STYLING */
 
+.dashboard {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
 .create-post {
   display: flex;
   flex-wrap: wrap;
@@ -297,9 +310,25 @@ footer p {
   width: 500px;
 }
 
-.my-blog-list h2 {
-  font-size: 40px;
+.blog-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-header h2 {
+  font-size: 50px;
   text-transform: capitalize;
+}
+
+.create-btn button {
+  width: 200px;
+  font-size: 20px;
+  background-color: var(--light-blue);
+  color: var(--dark-green);
+  border: var(--dark-green) solid 2px;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .my-blog-posts {
@@ -317,11 +346,6 @@ footer p {
   background-color: var(--coral);
 }
 
-/* .blog a {
-  text-decoration: none;
-  color: black;
-} */
-
 .my-blog-posts span {
   color: var(--dark-green);
   font-weight: bold;
@@ -333,8 +357,55 @@ footer p {
   color: black;
   font-weight: bold;
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 .my-info {
   font-size: 18px;
+}
+
+.edit-btn button,
+.delete-btn button {
+  border: black solid 2px;
+  background-color: var(--light-blue);
+  font-size: 16px;
+  margin: 10px 10px 0 0;
+}
+
+.edit-blog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-blog h2 {
+  font-size: 50px;
+}
+
+.form-title,
+.form-content {
+  margin-top: 15px;
+}
+
+.form-title input,
+.form-content input {
+  width: 500px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.save-blog-btn {
+  margin-right: 46px;
+}
+
+.save-blog-btn,
+.delete-post-btn {
+  width: 225px;
+  margin-top: 15px;
+  font-size: 18px;
+  background-color: var(--dark-green);
+  color: var(--background-color);
+  border: none;
+  padding: 10px 0;
 }

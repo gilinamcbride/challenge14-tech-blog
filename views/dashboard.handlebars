@@ -1,23 +1,11 @@
-<section class="create-post">
-  <h2>Create New Post</h2>
-
-  <form class="new-blog-form">
-    <div>
-      <div>Title</div>
-      <label for="blog-title"></label>
-      <input type="text" id="blog-title" name="blog-title" />
-    </div>
-    <div>
-      <div class="blog-content">Content</div>
-      <textarea name="blog-body"></textarea>
-    </div>
-    <button type="submit" class="blog-btn">Create</button>
-  </form>
-</section>
-
-{{#if blogs.length}}
   <div class="my-blog-list">
-    <h2>Your Posts</h2>
+    <div class="blog-header">
+      <h2>Your Blogs</h2>
+      <a href="/dashboard/create" class="create-btn"><button
+          type="submit"
+        >Create New Blog</button></a>
+    </div>
+{{#if blogs.length}}
     {{#each blogs as |blog|}}
       <article class="my-blog-posts">
         <a href="/blog/{{id}}">
@@ -34,9 +22,14 @@
               {{format_plural "comment" comments.length}}</span>
           </div>
         </a>
+        <a href="/dashboard/edit/{{id}}" class="edit-btn"><button
+            type="submit"
+          >Edit Blog</button></a>
+        <a href="/dashboard/edit/{{id}}" class="delete-btn"><button
+            type="submit"
+          >Delete Blog</button></a>
+
       </article>
     {{/each}}
   </div>
 {{/if}}
-
-<script src="/javascript/add-blog.js"></script>

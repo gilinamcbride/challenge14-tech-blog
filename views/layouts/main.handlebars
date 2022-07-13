@@ -7,28 +7,26 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>
-          <a href="/">Tech Blog</a>
-        </h1>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/dashboard">Dashboard</a>
-          {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">Logout</button>
-          {{else}}
-            <a href="/login">Login</a>
-          {{/if}}
-        </nav>
-      </header>
-      <main>
-        {{{body}}}
-      </main>
-      <footer>
-        <p>&copy;2022 Tech Blog</p>
-      </footer>
-    </div>
+    <header>
+      <h1>
+        <a href="/">Tech Blog</a>
+      </h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+          <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+    <footer>
+      <p>&copy;2022 Tech Blog</p>
+    </footer>
 
   </body>
   {{#if loggedIn}}
