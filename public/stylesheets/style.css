@@ -259,3 +259,82 @@ footer p {
   margin-top: 5px;
   font-weight: bold;
 }
+
+/* DASHBOARD STYLING */
+
+.create-post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-post h2 {
+  font-size: 50px;
+}
+
+.create-post input {
+  width: 500px;
+}
+
+.blog-content {
+  margin-top: 15px;
+}
+
+.create-post textarea {
+  width: 500px;
+  height: 200px;
+}
+
+.create-post button {
+  margin-top: 10px;
+  border: none;
+  background-color: var(--dark-green);
+  color: var(--background-color);
+  font-size: 20px;
+  padding: 10px 20px;
+  width: 500px;
+}
+
+.my-blog-list h2 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.my-blog-posts {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: var(--light-pink);
+}
+
+.my-blog-posts a {
+  text-decoration: none;
+  color: black;
+}
+
+.my-blog-posts:nth-child(odd) {
+  background-color: var(--coral);
+}
+
+/* .blog a {
+  text-decoration: none;
+  color: black;
+} */
+
+.my-blog-posts span {
+  color: var(--dark-green);
+  font-weight: bold;
+}
+
+.my-title {
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.my-info {
+  font-size: 18px;
+}

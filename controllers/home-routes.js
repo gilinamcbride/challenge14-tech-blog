@@ -20,7 +20,6 @@ router.get("/", (req, res) => {
     ],
   })
     .then((dbBlogData) => {
-      //   res.render("homepage", dbBlogData[0].get({ plain: true }));
       const blogs = dbBlogData.map((blog) => blog.get({ plain: true }));
       res.render("homepage", { blogs, loggedIn: req.session.loggedIn });
     })
