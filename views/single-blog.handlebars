@@ -9,9 +9,10 @@
     By
     {{blog.user.username}}
     on
-    {{blog.createdAt}}
+    {{format_date blog.createdAt}}
     |
-    <span>{{blog.comments.length}} comment(s)</span>
+    <span>{{blog.comments.length}}
+      {{format_plural "comment" comments.length}}</span>
   </div>
 </article>
 
@@ -36,7 +37,7 @@
       <div class="comment-info">
         {{user.username}}
         on
-        {{created_at}}
+        {{format_date created_at}}
       </div>
     </section>
   {{/each}}

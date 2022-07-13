@@ -9,9 +9,10 @@
           By
           {{user.username}}
           on
-          {{createdAt}}
+          {{format_date createdAt}}
           |
-          <span>{{comments.length}} comment(s)</span>
+          <span>{{comments.length}}
+            {{format_plural "comment" comments.length}}</span>
         </div></a>
     </article>
   {{/each}}
