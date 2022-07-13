@@ -31,10 +31,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("/blog/:id", (req, res) => {
-  if (!req.session.loggedIn) {
-    res.redirect("/login");
-    return;
-  }
+  // if (!req.session.loggedIn) {
+  //   res.redirect("/login");
+  //   return;
+  // }
   Blog.findOne({
     where: {
       id: req.params.id,
